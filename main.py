@@ -50,7 +50,9 @@ Welcome to Rock, Paper, Scissors!
 player = int(input("Choose one of the options to continue (1 or 2 or 3): ")) - 1
 print("\n")
 
-if player == computer:
+if player > 2 or player < 0:
+    print("Invalid input. Please try again.")
+elif player == computer:
     print(f"You chose: {rps_string[player]}\n", rps[player])
     print(f"Computer chose: {rps_string[computer]}\n", rps[computer])
     print("Its a tie!")
